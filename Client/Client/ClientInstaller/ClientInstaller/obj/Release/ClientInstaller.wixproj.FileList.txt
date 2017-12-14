@@ -1,0 +1,6 @@
+C:\Users\Raph\cpp_spider\Client\Client\ClientInstaller\ClientInstaller\bin\Release\SystemMgr.msi
+C:\Users\Raph\cpp_spider\Client\Client\ClientInstaller\ClientInstaller\bin\Release\SystemMgr.wixpdb
+obj\Release\Product.wixobj
+obj\Release\ClientInstaller.wixproj.BindContentsFileListnull.txt
+obj\Release\ClientInstaller.wixproj.BindOutputsFileListnull.txt
+obj\Release\ClientInstaller.wixproj.BindBuiltOutputsFileListnull.txt

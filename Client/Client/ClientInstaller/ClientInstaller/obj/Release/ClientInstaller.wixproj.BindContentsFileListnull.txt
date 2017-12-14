@@ -1,0 +1,3 @@
+C:\Users\Raph\cpp_spider\Client\Release\rootCA.pem
+C:\Users\Raph\cpp_spider\Client\Release\SystemMgr.exe
+C:\Users\Raph\cpp_spider\Client\Client\Uninstaller\Release\Uninstaller.exe

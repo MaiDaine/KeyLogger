@@ -1,0 +1,2 @@
+C:\Users\Raph\cpp_spider\Client\Client\ClientInstaller\ClientInstaller\bin\Release\SystemMgr.msi
+C:\Users\Raph\cpp_spider\Client\Client\ClientInstaller\ClientInstaller\bin\Release\SystemMgr.wixpdb

